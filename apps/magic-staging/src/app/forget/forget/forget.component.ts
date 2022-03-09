@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'openid-forget',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgetComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  onSignup() {
+    this.router.navigate(['/signup']);
+  }
 }
