@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "magic-staging": "apps/magic-staging",
+    "magic-staging-e2e": "apps/magic-staging-e2e"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "root": "apps/magic-staging-e2e",
+  "sourceRoot": "apps/magic-staging-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/magic-staging-e2e/cypress.json",
+        "devServerTarget": "magic-staging:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "magic-staging:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/magic-staging-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["magic-staging"]
+}
