@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { faGoogle, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'openid-signin',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
-  constructor() { }
+  faGoogle = faGoogle;
+  faFacebook = faFacebook;
+  faLinkedin = faLinkedin;
+
+  constructor(
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
+  }
+
+  onSignup(): void {
+    this.router.navigate(['/signup']);
   }
 
 }
