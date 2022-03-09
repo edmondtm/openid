@@ -18,7 +18,10 @@
           "apps/magic-staging/src/favicon.ico",
           "apps/magic-staging/src/assets"
         ],
-        "styles": ["apps/magic-staging/src/styles.scss"],
+        "styles": [
+          "apps/magic-staging/src/styles.scss",
+          "node_modules/bootstrap/dist/css/bootstrap.css"
+        ],
         "scripts": []
       },
       "configurations": {
