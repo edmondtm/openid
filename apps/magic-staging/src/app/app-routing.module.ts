@@ -5,7 +5,7 @@ const routes: Routes = [
   {path: 'signin', loadChildren: () => import('./signin/signin.module').then(m => m.SigninModule)},
   {path: 'signup', loadChildren: () => import('./signup/signup.module').then(m => m.SignupModule)},
   {path: 'forget', loadChildren: () => import('./forget/forget.module').then(m => m.ForgetModule)},
-  {path: 'reset/:code', loadChildren: () => import('./reset/reset.module').then(m => m.ResetModule)},
+  {path: 'reset/:key', loadChildren: () => import('./reset/reset.module').then(m => m.ResetModule)},
   {path: '', pathMatch: 'full', redirectTo: 'signin'}
 ]
 
