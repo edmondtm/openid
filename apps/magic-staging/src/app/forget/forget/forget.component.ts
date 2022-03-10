@@ -13,6 +13,7 @@ export class ForgetComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    return;
   }
 
   onSignup() {
