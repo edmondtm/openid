@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ForgetRoutingModule } from './forget-routing.module';
 import { ForgetComponent } from './forget/forget.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ForgetComponent } from './forget/forget.component';
   ],
   imports: [
     CommonModule,
-    ForgetRoutingModule
+    ForgetRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class ForgetModule { }

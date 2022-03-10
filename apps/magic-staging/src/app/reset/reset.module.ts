@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ResetRoutingModule } from './reset-routing.module';
 import { ResetComponent } from './reset/reset.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ResetComponent } from './reset/reset.component';
   ],
   imports: [
     CommonModule,
-    ResetRoutingModule
+    ResetRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class ResetModule { }
