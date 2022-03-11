@@ -27,6 +27,6 @@ export interface ResetPasswordDto {
 export interface UserProfile {
   id: string;
   name: string;
-  role: string;
+  role: 'public' | 'admin';
   verified: boolean;
 }
