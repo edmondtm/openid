@@ -13,21 +13,40 @@
                             <fa-icon [icon]="faLinkedin"></fa-icon>
                         </div>
                         <div class="or">or use your e-mail for registration :</div>
-                        <div class="input-text">
-                            <input type="email" placeholder="Enter your email" id="user-name" require>
-                        </div>
-                        <div class="input-text">
-                            <input type="password" placeholder="Enter your password">
-                        </div>
-
-                        <div class="input-text d-flex justify-content-end">
-                            <a routerLink="/forget">Forget Password</a>
-                        </div>
-                        
-                        <div class="buttons first">
-                            <button class="sign_up_here" (click)="onSignup()">Create Account</button>
-                            <button class="sign_in_here">Sign in</button>
-                        </div>
+                        <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+                            <div class="input-text">
+                                <input type="email" placeholder="Enter your email" id="user-name" name="email"
+                                formControlName="email">
+                                <div class="error-message"
+                                *ngIf="signinForm.get('email')?.invalid && (submitted || signinForm.get('email')?.touched)">
+                                    <span *ngIf="signinForm.get('email')?.errors?.['required']">
+                                        Email Required
+                                    </span>
+                                    <span *ngIf="signinForm.get('email')?.errors?.['email']">
+                                        Valid Email Required
+                                    </span>
+                                </div>                                
+                            </div>
+                            <div class="input-text">
+                                <input type="password" placeholder="Enter your password" name="password"
+                                formControlName="password">
+                                <div class="error-message"
+                                *ngIf="signinForm.get('password')?.invalid && (submitted || signinForm.get('password')?.touched)">
+                                    <span *ngIf="signinForm.get('password')?.errors?.['required']">
+                                        Password Required
+                                    </span>
+                                </div>                                
+                            </div>
+    
+                            <div class="input-text d-flex justify-content-end">
+                                <a routerLink="/forget">Forget Password</a>
+                            </div>
+                            
+                            <div class="buttons first">
+                                <button class="sign_up_here" (click)="onSignup()">Create Account</button>
+                                <button class="sign_in_here" type="submit">Sign in</button>
+                            </div>
+                        </form>
                     </div>
                     <div class="main">
                         <div class="heading">
